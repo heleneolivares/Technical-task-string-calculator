@@ -80,17 +80,15 @@ Organizing the app into small xomponents. Each project is independent in structu
         5. Sum
 
 ### **Reflection:**
+- **This first task** helped me understand how to start building functionality step by step. I learned to focused on writing a small test first, seeing it fail, and then implementing the minimum code required to make it pass. This rythim helped me stay focused and prevented me from overcomplicating the funcion too early. 
+Technically I faced two issues: 
 
-- **What went wrong:** 
     1. ProjectReference path on macOS: I generated a .fsproj that used windows backslashes (\) in the <ProjectReference> and on macOs the past must be forward slashes (/)
     otherwise the test project can't see the src project. 
     2. Compiler couldn't find StringCalculator.core and add: In phase 2 of MiniTask1 the errors didn't go away because I hadn't include Core.fs in the src/ .fsproj file. 
-- **What I learned:** 
-    1. TDD rhythm: even though I knew the theory of TDD I naver used before. so I applied by writing a failing test, then, adding the minimium code to pass the test nad then, refactor if needed. 
-    2. Pipeline operator |>: "Take the result of previous step and pass it to the next function. 
-    3. Lambda in F#: a tiny, anonymous function. 
-    4. RemoveEmptyEntries versus whitespaces: it only drops empty "", not " ". That's why I added Trim() before parsing. 
-
+Fixing these mistakes helped me understand how .fsproj files manage structure and dependencies.
+For **Edge cases**, I first followed that the empty string("") should return 0. I used String.IsNullOrWhiteSpaces(numbers) to manage cases where input is null, empty, or just spaces. I algo learned how to trim and how to split prevent common input errors. These small steps made the function more stable.
+Building clean and maintainable code is fundamental for understanding the pipeline. Using |> operator made the flow easier to read, lambda helped keep the function concise. Even though the task was quite simple, it tagught me how to think incrementally and anticipate edge cases.
 ## Task 2: 
 
 ### Step 1: 

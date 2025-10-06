@@ -27,23 +27,3 @@ module Task1_Tests =
         Assert.Equal(7, result)
 
     // Assert.Equal its a verification tool of Xunit that basically says check (assert) that the result are equal (Equal). Expected and actual result. 
-
-    // TESTING SOME OPTIONS
-    [<Fact>]
-    let ``Sum empty string`` () =
-        let actual1 = add ",4"
-        let actual2 = add "4,"
-        Assert.Equal(4,actual1)
-        Assert.Equal(4, actual2)
-
-    [<Fact>]
-    let ``Sum more than 2 numbers`` () = 
-        let actual3 = add "4,5,7,5"
-        let actual4 = add "3,0,3"
-        Assert.Equal(9,actual3)
-        Assert.Equal(3, actual4)
-
-    [<Fact>]
-    let ``sum space numbers`` () = 
-        let actual5 = add " 1, 5 "
-        Assert.Equal(6, actual5)

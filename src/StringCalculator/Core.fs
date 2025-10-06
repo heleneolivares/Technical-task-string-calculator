@@ -6,7 +6,7 @@ module Core =
         if String.IsNullOrWhiteSpace(numbers) then 
             0
         else 
-            numbers.Split([|','|], StringSplitOptions.RemoveEmptyEntries)
+            numbers.Split([|','; '\n'|], StringSplitOptions.RemoveEmptyEntries)
             |> Array.map (fun s -> s.Trim())
             |> Array.filter (fun s -> s <> "")
             |> Array.map int

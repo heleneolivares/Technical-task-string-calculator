@@ -107,3 +107,8 @@ Building clean and maintainable code is fundamental for understanding the pipeli
 
 **REFLECTION:** 
 - Task 2 taught me how to evolve a simple function into a more generic one through small steps. Each refactor was guided by failing tests, ensuring stability. I also learned that handling unexpected or messy inputs early in the pipeline keeps the core logic clean and maintainable. This approach is what helped me the most. I only needed to remove a single line of code to complete task 2. 
+
+## Task 3: 
+**REFLECTION:** 
+- The main challenge for me was to understand how to deal with different kinds of delimiters in the same string. When I did the test it fails because my app only accepted commas as a delimiters. So, I had to add to the Split the separator of a newline '\n'. To be sure, that this separator worked I try different types of test. "1,\n2,3", "\n1,\n2,\n3,\n4", "\n1,2,\n3", etc and in all of the test it passed. I also tested at the beginning for cases where I knew the test would fail. 
+

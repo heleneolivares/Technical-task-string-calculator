@@ -53,5 +53,7 @@ I decided while searching for standard practices and functional programming prin
 Organizing the app into small xomponents. Each project is independent in structure but connected in purpose.
 - **Source:** [For reasoning in how to organize] (https://fsharpforfunandprofit.com/posts/organizing-functions/)
 
+### Step 4: Add .gitignore
 
+- **Reasoning:** Create the file to prevent temporary and/or system-specific files from beign push into te repository, maintaining a professional project structure. 
 

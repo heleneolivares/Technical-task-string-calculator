@@ -1,0 +1,44 @@
+# Build results
+**/bin/
+**/obj/
+**/TestResults/
+
+# NuGet
+**/packages/
+*.nupkg
+*.snupkg
+.nuget/
+#User-specific files
+.vs/
+.vscode/
+*.suo
+*.User*.userosscache
+*.sln.docstates
+
+#masOS
+.DS_Store
+
+# Logs / coverage
+*.log
+coverage/
+*.coverage
+*.coveragexml
+TestResult.xml
+
+.fake/
+
+# F# / .NET specific
+*.dll
+*.exe
+*.pdb
+*.cache
+*.json
+*.props
+*.targets
+
+# IDEs
+.idea/
+*.user
+*.userprefs
+*.csproj.user
+*.fsproj.user

@@ -9,8 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Tests.fs" />
-    <Compile Include="Program.fs" />
+    <Compile Include="Task1_Tests.fs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\StringCalculator\StringCalculator.fsproj" />
+    <ProjectReference Include="../../src/StringCalculator/StringCalculator.fsproj" />
   </ItemGroup>
 
 </Project>

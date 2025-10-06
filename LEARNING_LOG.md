@@ -10,7 +10,7 @@
 
 ### Step2: Why F# and Test Driven Development
 
-- **F# Purpose:** promotes/encourages thinking in transformation, not steps. Instead of telling the computer how to do something, you define what the transformation should look like.
+- **F# Purpose:** promotes/encourages thinking in transformation, not steps. Instead of telling the computer how to do something, define what the transformation should look like.
 - **TDD Purpose:** (Test Driven Development) A workflow where you write test before code.
 - **Refelction:**  Usin TDD with F# feels like the right approach because both encourage planning before coding. Tdd force me to think what I expect and to think about possible errors before I start building. In simple words, they help me write cleaner, safer, and more intentional code. 
 
@@ -57,3 +57,36 @@ Organizing the app into small xomponents. Each project is independent in structu
 
 - **Reasoning:** Create the file to prevent temporary and/or system-specific files from beign push into te repository, maintaining a professional project structure. 
 
+### Step 5: Divide and conquer 
+1. Divide the big objective into small tasks (MiniTasks). 
+    - **MiniTask 1:** Empty string returns 0
+    - **MiniTask 2:** Sum two comma separated numbers from a string. 
+
+2. Cover the 3 phases of TDD for **MiniTask 1:** 
+    - **Phase 1:** Create the test focusing on the expected result. (an empty string returns 0). Run tests and it fails because the function doesn't exist yet. (RED phase)
+    -  **Phase 2:** Create the minimum logic (Core.fs) to pass the test. 
+        I create the function **add** and the parameters I put it as (_numbers: string) : int = 0 because I wanted to tell the app that im not using right now the value _numbers. so meanwhile every string should return an interger equal to zero. 
+    - **Phase 3:** No changes needed. Code was already clean and complete because the MiniTask was explicit and simple. 
+
+3. Cover the 3 phases of TDD for **MiniTask 2:**
+    - **Phase 1:** Create the test focusing in the result expected (two numbers separated by a comma in a string add themselves) Run tests and it fails because **add** still return 0. 
+    - **Phase 2:** Create the minimum core logic to pass the new test combining MiniTask1 and MiniTask2. 
+        I mix the MiniTask 1 logic with the MiniTask 2 logic  by using conditionals (if-else). We declare the **MiniTask 1** in the **if** statement and the **MiniTask2** in the **else** statement.
+        The **else** statement pipeline: 
+        1. Split by comma and skip empty entries.
+        2. Trim each piece.
+        3. Keep at most two values
+        4. Parse to integers
+        5. Sum
+
+### **Reflection:**
+
+- **What went wrong:** 
+    1. ProjectReference path on macOS: I generated a .fsproj that used windows backslashes (\) in the <ProjectReference> and on macOs the past must be forward slashes (/)
+    otherwise the test project can't see the src project. 
+    2. Compiler couldn't find StringCalculator.core and add: In phase 2 of MiniTask1 the errors didn't go away because I hadn't include Core.fs in the src/ .fsproj file. 
+- **What I learned:** 
+    1. TDD rhythm: even though I knew the theory of TDD I naver used before. so I applied by writing a failing test, then, adding the minimium code to pass the test nad then, refactor if needed. 
+    2. Pipeline operator |>: "Take the result of previous step and pass it to the next function. 
+    3. Lambda in F#: a tiny, anonymous function. 
+    4. RemoveEmptyEntries versus whitespaces: it only drops empty "", not " ". That's why I added Trim() before parsing. 

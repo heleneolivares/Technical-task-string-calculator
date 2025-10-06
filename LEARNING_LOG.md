@@ -90,3 +90,22 @@ Organizing the app into small xomponents. Each project is independent in structu
     2. Pipeline operator |>: "Take the result of previous step and pass it to the next function. 
     3. Lambda in F#: a tiny, anonymous function. 
     4. RemoveEmptyEntries versus whitespaces: it only drops empty "", not " ". That's why I added Trim() before parsing. 
+
+## Task 2: 
+
+### Step 1: 
+- Create a Task2_Test.fs file inside the tests/StringCalculator.Tests. 
+
+### Step2: 
+
+- Add the basic to the file like namespace, conect Xunit, conect to StringCalcular.Corem and create a [<Fact>]
+
+## Step3: 
+
+- Create the function and add numbers to the string to test the App. This Test fails because the Core has an Arrays.truncate 2 which limite the data to 2.
+
+## Step 4: 
+- Delete the Array.truncate 2. Then, test it. 
+
+**REFLECTION:** 
+- Task 2 taught me how to evolve a simple function into a more generic one through small steps. Each refactor was guided by failing tests, ensuring stability. I also learned that handling unexpected or messy inputs early in the pipeline keeps the core logic clean and maintainable. This approach is what helped me the most. I only needed to remove a single line of code to complete task 2. 

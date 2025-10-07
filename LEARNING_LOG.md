@@ -112,3 +112,19 @@ Building clean and maintainable code is fundamental for understanding the pipeli
 **REFLECTION:** 
 - The main challenge for me was to understand how to deal with different kinds of delimiters in the same string. When I did the test it fails because my app only accepted commas as a delimiters. So, I had to add to the Split the separator of a newline '\n'. To be sure, that this separator worked I try different types of test. "1,\n2,3", "\n1,\n2,\n3,\n4", "\n1,2,\n3", etc and in all of the test it passed. I also tested at the beginning for cases where I knew the test would fail. 
 
+## Task 4: 
+- The objective of this task is that I need to support delimiters that start in a format \\ at the beggining, followed by the [delimiter] and then a newline. So what is between the \\ and the newline is the delimiter. I do this adding codnitionals. if-else.
+1. I changed the name of the variable numbers to input, because it don't recieve just numbers. 
+2. I declared delimiters (stores the symbol that separates the numbers) and numberString (stores the part of the input that contains the numbers). 
+3. I declared parts (storage the result of splitting the input in two parts), firstPart (before the newline), secondPart (after the newline). 
+4. added condition to check if the input starts with // .
+- if it does, I extract the separator using substring(2) which removes // and keeps the delimiter.
+- Then I included in the list of delimiters as "separator"
+- if it doesn't start with // it use the default delimiters. 
+
+5. I keep using Split, Trim, Filter and Sum.
+
+**Reflection:** 
+When I first read the instructions for task 4 I was confused. but then while I was reading the example it made more sense. and I inmediatly thought in conditional logic. But I think the most interesting part was to understand the structure of the string before writing the conditional. I had to start thinking of this as "divide and conquer" I had to think of how to declare the condition, then divide the string in small parts then add a condition to that. So it was quite challenging. but when I divide the string in 2 parts became much easier to manage, to read, and to understand it. 
+I also learned that the delimiter must be consistent across the entire string and that the Split function can recieve multiple delimiters at once. 
+This task helped me undertand how to manipulate strings in a deeper way and reaffirmed that the best way to solve complex problems is to break them down into simple and logical parts.  

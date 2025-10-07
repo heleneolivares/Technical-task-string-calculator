@@ -29,7 +29,10 @@ module Core =
             if negatives.Length > 0 then   
                 let message = "negatives not allowed: " + String.Join(", ", negatives)
                 raise (ArgumentException(message))
-            else 
-                numbers |> Array.sum
+                
+            
+            numbers
+            |> Array.filter(fun n -> n <= 1000)
+            |> Array.sum
 
     

@@ -136,3 +136,9 @@ This task was a bit more complex than the previous ones because it wasn't just a
 To solve it, I used an if condition to detect the negative numbers after converting the inputs to integers.If any negative values were found. 
 I created a message as the task solicitate, that includes all of them and raised an ArgumentEXception with taht message. This helped me understand how to communicate errors in a clear way and how exceptions can control the program's flow. 
 What made this task so interesting for me is that it combined string manipulation, logic, and error habndling. I realized that building a function isnt just about producing correct results, but also about handling unexpected inputs. Overall, this task helped me think more like a developer. by this, I mean anticipating problems validating data and making my code more robust.
+
+## Task 6: 
+
+**Reflection:**
+To do this task, I handle it by using an array filter that keeps only numbers less than or equal to 1000, ensuring that values like 1001 and above are excluded from the final result while 1000 is still included. 
+Implementing this filter helped me understando how to control which data elements participate in a calculation and how a simple logical condition can change the output of a program. It also reinforced the importance of validating inputs and creating clear and explicit rules to manage edge cases. This step made the code more robust and adaptable to new requirementes without affectung the previous funcionalities. 

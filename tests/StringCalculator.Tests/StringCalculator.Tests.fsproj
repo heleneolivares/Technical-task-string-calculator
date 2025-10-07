@@ -8,7 +8,7 @@
     <IsTestProject>true</IsTestProject>
   </PropertyGroup>
 
-  <ItemGroup><Compile Include="Task5_Tests.fs" /><Compile Include="Task4_Tests.fs" />
+  <ItemGroup><Compile Include="Task6_Test.fs" /><Compile Include="Task5_Tests.fs" /><Compile Include="Task4_Tests.fs" />
     <Compile Include="Task3_Tests.fs" />
     <Compile Include="Task2_Tests.fs" />
     <Compile Include="Task1_Tests.fs" />

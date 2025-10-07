@@ -127,4 +127,12 @@ Building clean and maintainable code is fundamental for understanding the pipeli
 **Reflection:** 
 When I first read the instructions for task 4 I was confused. but then while I was reading the example it made more sense. and I inmediatly thought in conditional logic. But I think the most interesting part was to understand the structure of the string before writing the conditional. I had to start thinking of this as "divide and conquer" I had to think of how to declare the condition, then divide the string in small parts then add a condition to that. So it was quite challenging. but when I divide the string in 2 parts became much easier to manage, to read, and to understand it. 
 I also learned that the delimiter must be consistent across the entire string and that the Split function can recieve multiple delimiters at once. 
-This task helped me undertand how to manipulate strings in a deeper way and reaffirmed that the best way to solve complex problems is to break them down into simple and logical parts.  
+This task helped me undertand how to manipulate strings in a deeper way and reaffirmed that the best way to solve complex problems is to break them down into simple and logical parts.
+
+## Task 5: 
+
+**Reflection:** 
+This task was a bit more complex than the previous ones because it wasn't just about numbers. Here, I had to add logic that checks for negative numbers and generates a clear message instead of calculating a sum result. 
+To solve it, I used an if condition to detect the negative numbers after converting the inputs to integers.If any negative values were found. 
+I created a message as the task solicitate, that includes all of them and raised an ArgumentEXception with taht message. This helped me understand how to communicate errors in a clear way and how exceptions can control the program's flow. 
+What made this task so interesting for me is that it combined string manipulation, logic, and error habndling. I realized that building a function isnt just about producing correct results, but also about handling unexpected inputs. Overall, this task helped me think more like a developer. by this, I mean anticipating problems validating data and making my code more robust.

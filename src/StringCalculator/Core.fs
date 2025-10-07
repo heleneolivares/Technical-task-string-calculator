@@ -17,11 +17,19 @@ module Core =
                     [| separator; ","; "\n" |], secondPart 
                 else 
                 [| ","; "\n"|], input
-            numberString
-                .Split(delimiters, StringSplitOptions.None)
-            |> Array.map (fun s -> s.Trim())
-            |> Array.filter (fun s -> s <> "")
-            |> Array.map int
-            |> Array.sum
+            let numbers =
+                numberString
+                    .Split(delimiters, StringSplitOptions.None)
+                |> Array.map (fun s -> s.Trim())
+                |> Array.filter (fun s -> s <> "")
+                |> Array.map int
+
+            let negatives = numbers |> Array.filter (fun n -> n < 0)
+
+            if negatives.Length > 0 then   
+                let message = "negatives not allowed: " + String.Join(", ", negatives)
+                raise (ArgumentException(message))
+            else 
+                numbers |> Array.sum
 
     
